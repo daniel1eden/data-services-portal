@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    {% block title %} 
+    
+    {% endblock title %}
+  </title>
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans&display=swap" rel="stylesheet"> 
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/master.css' %}" type="text/css">
+</head>
+<body>
+    <div id="header-container">
+        <div id="header-area">
+            <div id="header-text">
+                <h1>Data Services {}</h1>
+                <h2>All You Need to Know</h2>
+            </div>
+        </div>
+
+    </div>
+    <div id="nav-menu-top" class="nav">
+      <div id="menu-background" class="under-triangle"></div>
+      <div id="nav-group-top" class="nav-menu-group">
+          <a class="nav-menu-item" href="">Menu Item 1</a>
+          <a class="nav-menu-item" href="">Menu Item 2</a>
+          <a class="nav-menu-item" href="">Menu Item 3</a>
+          <a class="nav-menu-item" href="">Menu Item 4</a>
+          <a class="nav-menu-item" href="">Menu Item 5</a>
+      </div>        
+    </div>
+    <div id="container-main">
+        <div class="content-area">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec sagittis aliquam malesuada bibendum. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Porta nibh venenatis cras sed felis. Posuere morbi leo urna molestie at elementum eu. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Auctor urna nunc id cursus metus. Consequat interdum varius sit amet mattis vulputate. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. At varius vel pharetra vel turpis nunc eget lorem dolor. Dictum sit amet justo donec enim diam vulputate. Vitae elementum curabitur vitae nunc sed velit dignissim. In fermentum et sollicitudin ac orci phasellus egestas. Imperdiet sed euismod nisi porta lorem. Sit amet tellus cras adipiscing. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Sit amet tellus cras adipiscing enim eu. Elit ut aliquam purus sit amet luctus venenatis lectus. Urna et pharetra pharetra massa massa ultricies mi quis. Orci sagittis eu volutpat odio facilisis.
+              </p>
+              <p>
+                  Sed ullamcorper morbi tincidunt ornare massa eget. Cras sed felis eget velit aliquet sagittis id. Rhoncus urna neque viverra justo nec. Sem integer vitae justo eget magna fermentum iaculis eu. Id aliquet risus feugiat in ante. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Viverra nibh cras pulvinar mattis nunc sed blandit. Scelerisque viverra mauris in aliquam. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Elit ut aliquam purus sit amet luctus venenatis.
+              </p>
+          </div>
+        <div class="content-area"></div>
+        <div class="content-area"></div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+{% block content %}
+  
+{% endblock content %}
+</body>
+</html>

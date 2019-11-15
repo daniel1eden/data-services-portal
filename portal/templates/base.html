@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="utf-8">
+  {% block links %}
+    
+  {% endblock links %}
+  <title>{% block title %}
+    
+  {% endblock title %}</title>
+</head>
+<body>
+  <div id="bannerbar">
+    <div id="logobanner">
+      <!-- <img class="centre" src="images/ARW_full_graphic.jpg"> -->
+      {% load static %}
+      <img src="{% static 'images/ARW_full_graphic.jpg' %}" alt="Adelphi Real World logo">
+    </div>
+  </div>
+
+  <p></p>
+  <p></p>
+  <div id="navlinks">
+    <a href="{% url 'index' %}"><button type="button">Home</button></a>
+    <a href="{% url 'team' %}"><button type="button">Meet the Team</button></a>
+    <a href="{% url 'prog' %}"><button type="button">Programming</button></a>
+    <a href="{% url 'translation' %}"><button type="button"> Translation/Proofreading</button></a> 
+    <a href="{% url 'ethics' %}"><button type="button">Ethics</button></a> 
+    <a href="{% url 'dp' %}"><button type="button">Data Processing</button></a>
+    <a href="{% url 'faq' %}"><button type="button">FAQ's</button></a>
+  </div>
+
+  {% block content %}
+    
+  {% endblock content %}
+</body>
+</html>

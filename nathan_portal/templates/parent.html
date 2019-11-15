@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/parent.css' %}">
+  <title>{% block title %}
+    
+  {% endblock title %}</title>
+  {% block links %}
+    
+  {% endblock links %}
+  
+</head>
+<body>
+  <div>
+    <div id="header-full">
+      <header id="header">
+        {% load static %}
+        <img title="" id="header_image" alt="" src="{% static 'images/JavaScript_Code.png'%}"/>
+        <h1 class="headings">Programming</h1>
+        <p>**Insert Text**</p>
+      </header>
+      <div class="navbar">
+        <nav id="top_navbar" role="navigation">
+          <a href="{% url 'home' %}" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+          <a href="{% url 'timeline' %}"><i class="fa fa-fw fa-clock-o"></i> Timeline</a>
+          <a href="{% url 'meet_the_team' %}"><i class="fa fa-fw fa-user"></i> The Team</a>
+          <a href="{% url 'help_desk' %}"><i class="fa fa-fw fa-envelope"></i> Helpdesk</a>
+          <a href="{% url 'changes_log' %}"><i class="fa fa-fw fa-bookmark"></i> Changes Logs</a>
+          <a href="{% url 'faqs' %}"><i class="fa fa-fw fa-question-circle"></i> FAQ's</a>
+        </nav>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% block content %}
+    
+  {% endblock content %}
+
+
+  <div>
+    <footer id="footer">
+      <div class="icon_bar">
+        <a href="{% url 'home' %}" class="active"><i class="fa fa-home" title="Home"></i></a>
+        <a href="{% url 'timeline' %}"><i class="fa fa-clock-o" title="Timeline"></i></a>
+        <a href="{% url 'meet_the_team' %}"><i class="fa fa-user" title="The Team"></i></a>
+        <a href="{% url 'help_desk' %}"><i class="fa fa-envelope" title="Helpdesk"></i></a>
+        <a href="{% url 'changes_log' %}"><i class="fa fa-bookmark" title="Changes Logs"></i></a>
+        <a href="{% url 'faqs' %}"><i class="fa fa-question-circle" title="FAQs"></i></a>
+        <a href="#"><i class="fa fa-search" title="Search"></i></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

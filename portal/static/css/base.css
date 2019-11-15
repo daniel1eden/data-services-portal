@@ -1,0 +1,47 @@
+h1{
+    color:#008380;
+    text-align:center;
+    font-weight:bold;
+    text-decoration-line: underline;
+    font-size:2.6em;
+    border: 1px solid black;
+    }
+
+
+h2{
+color:#008380;
+text-align:center;
+font-weight:bold;
+text-decoration-line: underline;
+font-size:1.8em;
+}
+.centre {
+    width: 406px;
+    height: 60px;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+.style{
+}
+#bannerbar{
+text-align:center;
+}
+
+#navlinks {
+    border-bottom: 2px solid #440529;
+    border-top: 1px solid #440529;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#navlinks div {
+    background-color: transparent;
+    padding: 10px 0 9px 0;
+    display: inline-block;
+    cursor: pointer;
+    left-margin:200px;
+}
+
+
+
