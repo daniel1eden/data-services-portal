@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5;
+}
+
+#header_image {
+    width: 100%;
+    max-height: 300px;
+}
+
+#header {
+    text-align: center;
+    background-color: #ffffff;
+    color: #008380;
+}
+
+#header h1 {
+    font-size: 40px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #008380;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #000000;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 5px 5px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: right;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+.search-container {
+  float: right;
+  padding: 5px;
+  margin-top: 3px;
+}
+
+.active {
+  background-color: #b3b3b3;
+}
+
+.icon_bar {
+  background-color: #008380;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+}
+
+.icon_bar a {
+  float: left;
+  text-align: center;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 25px;
+}
+
+.icon_bar a:hover {
+  background-color: #000000;
+}
+
