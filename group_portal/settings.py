@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=h#w+*0a163q*%=nb)wmd1^wu)m+9szykdhx23$scnp^fn^uwb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['daniel1eden1.eu.pythonanywhere.com']
+# REMOVE '127.0.0.1' when in deployment!
+ALLOWED_HOSTS = ['daniel1eden1.eu.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -37,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'portal',
+    'group_portal',
     'nathan_portal',
     'louis_portal',
+    'portal'
 ]
 
 MIDDLEWARE = [

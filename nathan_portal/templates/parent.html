@@ -13,6 +13,9 @@
   {% block links %}
     
   {% endblock links %}
+  {% block scripts %}
+    
+  {% endblock scripts %}
   
 </head>
 <body>
@@ -21,17 +24,20 @@
       <header id="header">
         {% load static %}
         <img title="" id="header_image" alt="" src="{% static 'images/JavaScript_Code.png'%}"/>
-        <h1 class="headings">Programming</h1>
+        <h1 class="headings">Data Services</h1>
         <p>**Insert Text**</p>
       </header>
       <div class="navbar">
         <nav id="top_navbar" role="navigation">
           <a href="{% url 'home' %}" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
           <a href="{% url 'timeline' %}"><i class="fa fa-fw fa-clock-o"></i> Timeline</a>
-          <a href="{% url 'meet_the_team' %}"><i class="fa fa-fw fa-user"></i> The Team</a>
+          <a href="{% url 'meet_the_team' %}"><i class="fa fa-fw fa-user"></i> Meet The Team</a>
           <a href="{% url 'help_desk' %}"><i class="fa fa-fw fa-envelope"></i> Helpdesk</a>
           <a href="{% url 'changes_log' %}"><i class="fa fa-fw fa-bookmark"></i> Changes Logs</a>
           <a href="{% url 'faqs' %}"><i class="fa fa-fw fa-question-circle"></i> FAQ's</a>
+          <a href="{% url 'hints_tips' %}"><i class="fa fa-fw fa-lightbulb-o"></i> Hints & Tips</a>
+          <a href="{% url 'enhance_questions' %}"><i class="fa fa-fw fa-plus-square-o"></i> Enhance Questions</a>
+          <a href="{% url 'question_structure' %}"><i class="fa fa-fw fa-file-text-o"></i> Question Structure</a>
         </nav>
         <div class="search-container">
           <form action="/action_page.php">
@@ -57,6 +63,9 @@
         <a href="{% url 'help_desk' %}"><i class="fa fa-envelope" title="Helpdesk"></i></a>
         <a href="{% url 'changes_log' %}"><i class="fa fa-bookmark" title="Changes Logs"></i></a>
         <a href="{% url 'faqs' %}"><i class="fa fa-question-circle" title="FAQs"></i></a>
+        <a href="{% url 'hints_tips' %}" class="active"><i class="fa fa-lightbulb-o" title="Hint & Tips"></i></a>
+        <a href="{% url 'enhance_questions' %}"><i class="fa fa-plus-square-o" title="Enhance Questions"></i></a>
+        <a href="{% url 'question_structure' %}"><i class="fa fa-file-text-o" title="Question Structure"></i></a>
         <a href="#"><i class="fa fa-search" title="Search"></i></a>
       </div>
     </footer>

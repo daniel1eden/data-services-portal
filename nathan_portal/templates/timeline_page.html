@@ -1,23 +1,485 @@
 {% extends "parent.html" %}
 
 {% block title %}
-    Programming Timeline
+    Projects Timeline
 {% endblock title %}
 
+{% block links %}
+<style>
+  table {
+    margin: 10px;
+    text-align: center; 
+    background-color: #ffffff;
+  }
+
+  table td {
+    width:300px;
+    border-radius: 10px;
+  }
+
+  .empty {
+    width: 50px;
+  }
+
+  .heading {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .scripting {
+    background-color: #34aeeb;
+    padding: 5px;
+  }
+
+  .translation {
+    background-color: #00ad28;
+    padding: 5px;
+  }
+
+  .processing {
+    background-color: #ff9500;
+    padding: 5px;
+  }
+
+  .project {
+    background-color: #a74bd1;
+    padding: 5px;
+  }
+
+  .ethics {
+    background-color: #fffd96;
+    padding: 5px;
+  }
+
+  .review {
+    background-color: #008380;
+    padding: 5px;
+  }
+
+  .downarrow,.upanddownarrow {
+    font-size: 30px;
+  }
+
+  .leftarrow,.rightarrow {
+    font-size: 30px;
+    width: 50px;
+  }
+
+  .clickbox {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #ffffff;
+  }
+
+  .popup_ethics {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #000000;
+  }
+
+  .popup .popuptext, .popup_ethics .popuptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    /*width: 160px;
+    margin-left: -80px;*/
+  }
+
+  .popup .popuptext::after, .popup_ethics .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  .popup .show, .popup_ethics .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+</style>
+
+{% endblock links %}
+{% block scripts %}
+<script>
+  function reviewPopUpCreation(){
+    $("#reviewPopUp").toggleClass("show");
+  }
+  function LPSpecPopUpCreation(){
+    $("#LPSpecPopUp").toggleClass("show");
+  }
+  function scriptingPopUpCreation(){
+    $("#scriptingPopUp").toggleClass("show");
+  }
+  function LPScriptingPopUpCreation(){
+    $("#LPScriptingPopUp").toggleClass("show");
+  }
+  function testingPopUpCreation(){
+    $("#testingPopUp").toggleClass("show");
+  }
+  function translationPopUpCreation(){
+    $("#translationPopUp").toggleClass("show");
+  }
+  function ethicsPopUpCreation(){
+    $("#ethicsPopUp").toggleClass("show");
+  }
+  function passwordsPopUpCreation(){
+    $("#passwordsPopUp").toggleClass("show");
+  }
+  function fieldworkPopUpCreation(){
+    $("#fieldworkPopUp").toggleClass("show");
+  }
+  function proofReadingPopUpCreation(){
+    $("#proofReadingPopUp").toggleClass("show");
+  }
+  function softLaunchPopUpCreation(){
+    $("#softLaunchPopUp").toggleClass("show");
+  }
+  function commissionPopUpCreation(){
+    $("#commissionPopUp").toggleClass("show");
+  }
+  function agencyBriefingPopUpCreation(){
+    $("#agencyBriefingPopUp").toggleClass("show");
+  }
+  function dataCheckPopUpCreation(){
+    $("#dataCheckPopUp").toggleClass("show");
+  }
+  function paedEthicsPopUpCreation(){
+    $("#paedEthicsPopUp").toggleClass("show");
+  }
+  function fullLaunchPopUpCreation(){
+    $("#fullLaunchPopUp").toggleClass("show");
+  }
+  function dbCreationPopUpCreation(){
+    $("#dbCreationPopUp").toggleClass("show");
+  }
+  function dbDeliveryPopUpCreation(){
+    $("#dbDeliveryPopUp").toggleClass("show");
+  }
+</script>
+{% endblock scripts %}
+
 {% block content %}
-    <div id="articles-full">
-      <article class="articles" id="current_projects">
-        <h2 class="headings">Timeline of Programming</h2>
-        <h5 class="headings">Nov 04, 2019</h5>
-        <p>Here is a breakdown of the Timeline for the Programming section of projects:</p>
-        <ul>
-          <li>**Insert Text**</li>
-          <li>**Insert Text**</li>
-          <li>**Insert Text**</li>
-        </ul>
-      </article>
-    </div>
-  </div> 
-  <br/>
+<div>
+  <div id="articles-full">
+    <h2 class="headings">Timeline of Projects</h2>
+    <table>
+      <th class="heading" colspan="3">PROJECT LIFECYCLE</th>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="review">
+          <div class="popup" onclick="reviewPopUpCreation()">Material Review
+            <span class="popuptext" id="reviewPopUp">Material Review Pop Up Information!!!</span>
+          </div>
+        </td>
+        <td class="empty"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="downarrow">&#8595;</td>
+        <td class="empty"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="scripting">
+          <div class="popup" onclick="scriptingPopUpCreation()">Scripting
+            <span class="popuptext" id="scriptingPopUp">
+              <ul>
+                <li>Paper materials converted into online surveys</li>
+                <li>Manually programmed utilizing survey creation software</li>
+                <li>The prototype survey is created in several portions:
+                  <ul>
+                    <li>Define question text type</li>
+                    <li>Survey routing</li>
+                    <li>Validation</li>
+                    <li>Layout/page templates</li>
+                  </ul>
+                </li>
+              </ul>
+            </span>
+          </div>
+        </td>
+        <td class="rightarrow">&#8594;</td>
+        <td class="scripting">
+          <div class="popup" onclick="LPSpecPopUpCreation()">Landing page spec creation
+            <span class="popuptext" id="LPSpecPopUp">Landing page spec creation Pop Up Information!!!</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="upanddownarrow">&#8645;</td>
+        <td class="empty"></td>
+        <td class="downarrow">&#8595;</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="project">
+          <div class="popup" onclick="testingPopUpCreation()">TESTING
+            <span class="popuptext" id="testingPopUp">
+              <h5>Testing and validation improves quality of data</h5>
+              <ul>
+                <li>Reduces likelihood of re-contacts</li>
+                <li>Reduces errors in the dataset</li>
+                <li>Less agency queries</li>
+                <li>Better respondent experience</li>
+              </ul>
+              <h5>Why are teams required to test links?</h5>
+              <ul>
+                <li>Ownership - Research Team (intricate therapy area knowledge)</li>
+                <li>Awareness of issues faced in previous DSP iterations</li>
+                <li>Knowledge of research objectives</li>
+                <li>Reduce issues in field (much easier to rectify mistakes in testing compared to when in field)</li>
+              </ul>
+            </span>
+          </div>
+        </td>
+        <td class="leftarrow">&#8592;</td>
+        <td class="scripting">
+          <div class="popup" onclick="LPScriptingPopUpCreation()">Landing page scripting
+            <span class="popuptext" id="LPScriptingPopUp">Landing page scripting Pop Information!!!</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="downarrow">&#8595;</td>
+        <td class="empty"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="translation">
+          <div class="popup" onclick="translationPopUpCreation()">Translation
+            <span class="popuptext" id="translationPopUp">Translation Pop Up Information!!!</span>
+          </div>  
+        </td>
+        <td class="leftarrow">&#8592;</td>
+        <td class="ethics">
+          <div class="popup_ethics" onclick="ethicsPopUpCreation()">ETHICS
+            <span class="popuptext" id="ethicsPopUp">Ethics Pop Up Information!!!</span>  
+          </div>  
+        </td>
+        <td class="empty"></td>
+        <td class="scripting">
+          <div class="popup" onclick="passwordsPopUpCreation()">Passwords sent
+            <span class="popuptext" id="passwordsPopUp">Passwords sent Pop Up Information!!!</span>  
+          </div>  
+        </td>
+      </tr>
+      <tr>
+        <td class="downarrow">&#8595;</td>
+        <td class="empty"></td>
+        <td class="downarrow">&#8595;</td>
+        <td class="empty"></td>
+        <td class="processing">
+          <div class="popup" onclick="fieldworkPopUpCreation()">Fieldwork report created
+            <span class="popuptext" id="fieldworkPopUp">Fieldwork report created Pop Up Information!!!</span>  
+          </div>  
+        </td>
+      </tr>
+      <tr>
+        <td class="translation">
+          <div class="popup" onclick="proofReadingPopUpCreation()">Proof reading - agency check
+            <span class="popuptext" id="proofReadingPopUp">Proof reading Pop Up Information!!!</span>  
+          </div>  
+        </td>
+        <td class="empty"></td>
+        <td class="scripting">
+          <div class="popup" onclick="softLaunchPopUpCreation()">Soft launch
+            <span class="popuptext" id="softLaunchPopUp">
+              <ul>
+                <li>The project is made active by scripting team</li>
+                <li>The survey is released to a small sample of respondents</li>
+              </ul>
+            </span>  
+          </div>  
+        </td>
+        <td class="empty"></td>
+        <td class="processing">
+          <div class="popup" onclick="commissionPopUpCreation()">Commission on-line coding
+            <span class="popuptext" id="commissionPopUp">Commission on-line coding Pop Up Information!!!</span>  
+          </div>  
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="downarrow">&#8595;</td>
+        <td class="empty"></td>
+        <td class="project">
+          <div class="popup" onclick="agencyBriefingPopUpCreation()">Agency Briefing
+            <span class="popuptext" id="agencyBriefingPopUp">Agency Briefing Pop Up Information!!!</span>  
+          </div>  
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="project">
+          <div class="popup" onclick="dataCheckPopUpCreation()">Data Check
+            <span class="popuptext" id="dataCheckPopUp">Data Check Pop Up Information!!!</span>  
+          </div>  
+        </td>
+        <td class="empty"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="downarrow">&#8595;</td>
+        <td class="empty"></td>
+        <td><b>KEY</b></td>
+      </tr>
+      <tr>
+        <td class="ethics">
+          <div class="popup_ethics" onclick="paedEthicsPopUpCreation()">Ethics (translated material/links) (Paediatrics DSPs only)
+            <span class="popuptext" id="paedEthicsPopUp">Paediatric Ethics Pop Up Information!!!</span>  
+          </div>  
+        </td>
+        <td class="rightarrow">&#8594;</td>
+        <td class="scripting">
+          <div class="popup" onclick="fullLaunchPopUpCreation()">Full Launch
+            <span class="popuptext" id="fullLaunchPopUp">Full launch Pop Up Information!!!</span>  
+          </div>  
+        </td>
+        <td class="empty"></td>
+        <td class="scripting"><a href="v2TeamPage.html" class="clickbox">Scripting team</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="downarrow">&#8595;</td>
+        <td class="empty"></td>
+        <td class="translation"><a href="v2TeamPage.html" class="clickbox">Translation team</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="processing">
+          <div class="popup" onclick="dbCreationPopUpCreation()">Database creation
+            <span class="popuptext" id="dbCreationPopUp">
+              <ul>
+                <li>DP is ALWAYS carried out in SPSS using syntax files so that results are quickly and accurately reproduced/updated</li>
+                <li>Clean out any unnecessary variables, remove test records</li>
+                <li>Rename variables to more sensible names that include material type</li>
+                <li>Clean out any auto-filled variables if appropriate</li>
+                <li>Define multiple response variables</li>
+                <li>Merge relevant material types into one database</li>
+                <li>Re-code any data as required</li>
+                <li>Define/derive extra variables as requested in DP Spec</li>
+                <li>Merge in external data recieved from Stats etc.</li>
+              </ul>
+            </span>  
+          </div>  
+        </td>
+        <td class="empty"></td>
+        <td class="project"><a href="timeline_page.html" class="clickbox">Project Team</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="downarrow">&#8595;</td>
+        <td class="empty"></td>
+        <td class="processing"><a href="v2TeamPage.html" class="clickbox">Data processing team</a></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="empty"></td>
+        <td class="processing">
+          <div class="popup" onclick="dbDeliveryPopUpCreation()">Database delivery
+            <span class="popuptext" id="dbDeliveryPopUp">Database delivery Pop Up Information!!!</span>  
+          </div>  
+        </td>
+        <td class="empty"></td>
+        <td></td>
+      </tr>
+    </table>
+    <article class="articles" id="current_projects">
+      <h3 class="headings">Programming</h2>
+      <h5 class="headings">Nov 04, 2019</h5>
+      <p>Here is a breakdown of the Timeline for the Programming section of projects:</p>
+      <ul>
+        <li>Scripting</li>
+        <li>Landing page spec creation</li>
+        <li>Landing page scritping</li>
+        <li>Passwords sent</li>
+        <li>Soft launch</li>
+        <li>Full launch</li>
+      </ul>
+    </article>
+    <br/>
+    <article class="articles" id="current_projects">
+      <h3 class="headings">Data Processing</h3>
+      <h5 class="headings">Nov 27, 2019</h5>
+      <p>Here is a breakdown of the Timeline for the Data Processing section of projects:</p>
+      <ul>
+        <li>Fieldwork report created</li>
+        <li>Commission on-line coding</li>
+        <li>Database creation</li>
+        <li>Database delivery</li>
+      </ul>
+    </article>
+    <br/>
+    <article class="articles" id="current_projects">
+      <h3 class="headings">Ethics & Translation</h3>
+      <h5 class="headings">Nov 27, 2019</h5>
+      <p>Here is a breakdown of the Timeline for the Ethics & Translation section of projects:</p>
+      <ul>
+        <li>ETHICS</li>
+        <li>Translation</li>
+        <li>Proof reading - agency check</li>
+        <li>Ethics (translated materials/links) (Paediatrics DSPs only)</li>
+      </ul>
+    </article>
+  </div>
+</div> 
   
 {% endblock content %}

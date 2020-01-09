@@ -1,24 +1,27 @@
 {% extends "parent.html" %}
 
 {% block title %}
-Programming Changes Log
+Changes Log Guide
 {% endblock title %}
 
 {% block content %}
 <div>
-<div id="articles-full">
-    <article class="articles" id="current_projects">
-    <h2 class="headings">Changes Log Guide</h2>
-    <h5 class="headings">Nov 05, 2019</h5>
-    <p>**Insert Text**:</p>
-    <ul>
+  <div id="articles-full">
+    <br class="articles" id="current_projects">
+      <h2 class="headings">Changes Log Guide</h2>
+      <h5 class="headings">Nov 05, 2019</h5>
+      <p>**Insert Text**:</p>
+      <ul>
         <li>**Insert Text**</li>
         <li>**Insert Text**</li>
         <li>**Insert Text**</li>
-    </ul>
+      </ul>
+      {% load static %}
+      <img src="{% static 'images/changes_log_guide.PNG' %}" alt="Picture of a changes log">
     </article>
-</div>
+  </div>
 </div>
 <br/> 
+<div>
 {% endblock  %}
   

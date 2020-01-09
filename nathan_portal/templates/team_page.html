@@ -1,25 +1,284 @@
 {% extends "parent.html" %}
 
 {% block tite %}
-Programming Meet the Team
+ Data Services Team
 {% endblock tite %}
 {% block content %}
-<div id="articles-full">
-      <article class="articles" id="current_projects">
-        <h2 class="headings">Meet the Team</h2>
-        <h5 class="headings">Nov 05, 2019</h5>
-        <p>Here is our team of Programmers:</p>
+<div>
+  <style>
+        .programming {
+      background-color: #34aeeb;
+      width: 300px;
+      border: 1px solid black;
+      margin: 5px;
+    }
+
+    .data_processing {
+      background-color: #eb5334;
+      width: 300px;
+      border: 1px solid black;
+      margin: 5px;
+    }
+
+    .ethics_translation {
+      background-color: #ebeb34;
+      width: 300px;
+      border: 1px solid black;
+      margin: 5px;
+    }
+
+    .name {
+      border-bottom: 1px solid black;
+      text-align: center;
+      background-color: #008380;
+      color: #ffffff;
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      padding: 2px;
+      margin: 5px;
+      margin-left: 50px;
+      border: 1px solid black;
+    }
+
+    .role {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      text-align: center;
+      margin-top: 0px;
+      background-color: #008380;
+      color: #ffffff;
+    }  
+  </style>
+
+  <div id="articles-full">
+    <article class="articles" id="data_services_team">
+      <h2 class="headings">Welcome to the Data Services Team...</h2>
+      <h5 class="headings">Nov 26, 2019</h5>
+      <p>The Data Services Team consists of 3 groups; Scripting, Data Processing and Ethics & Translation.</p>
+    </article>
+  </div>
+</div>
+<div>
+<h3>Scripting</h3>
+<p>The Scripting Team is responsible for turning paper materials into interactive online surveys.</p>
+<table>
+  <tr>
+    <td>
+      <div class="programming">
+        <header class="name">Louis Smith</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Associate Manager</p>
+        <p>About Me:</p>
         <ul>
-          <li>Louis Smith</li>
-          <li>Rashid Chowdhury</li>
-          <li>Fiona Bamforth</li>
-          <li>Daniel Eden</li>
-          <li>Nathan Kent</li>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
         </ul>
-      </article>
-    </div>
-  </div> 
-  <br/>
+        <p><i class="fa fa-fw fa-envelope"></i> louis.smith@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 578678</p>
+      </div>
+    </td>
+    <td>
+      <div class="programming">
+        <header class="name">Rashid Chowdhury</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Senior Script Writer</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> rashid.chowdhury@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 577367</p>
+      </div>
+    </td>
+    <td>
+      <div class="programming">
+        <header class="name">Fiona Bamforth</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Senior Data Script Operator</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> fiona.bamforth@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 577255</p>
+      </div>
+    </td>
+    <td>
+      <div class="programming">
+        <header class="name">Hannah Vickers</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Junior Scriptwriter</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> hannah.vickers@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 577464</p>
+      </div>
+    </td>
+    <td>
+      <div class="programming">
+        <header class="name">Daniel Eden</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Junior Programmer</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> daniel.eden@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 578733</p>
+      </div>
+    </td>
+    <td>
+      <div class="programming">
+        <header class="name">Nathan Kent</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Programmer</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> nathan.kent@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 578615</p>
+      </div>
+    </td>
+  </table>
+</div>
+<div>
+  <h3>Data Processing</h3>
+  <p>The Data Processing team is responsible for processing the data that comes from the online projects</p>
+  <table>
+    <tr>
+      <td>
+        <div class="data_processing">
+        <header class="name">Daniel Baskerville</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Associate Manager</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> daniel.baskerville@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 578692</p>
+      </div>
+    </td>
+    <td>
+      <div class="data_processing">
+        <header class="name">Mark Cannon</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Data Service & Scripting Executive</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> mark.cannon@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 577337</p>
+      </div>
+    </td>
+    <td>
+      <div class="data_processing">
+        <header class="name">Geoffrey Soutter</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Data Processing Analyst</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> geoffrey.soutter@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 577284</p>
+      </div>
+    </td>
+  </table>
+</div>
+<div>
+<h3>Translation & Ethics</h3>
+<p>The Translation & Ethics Team is responsible for the translation/proof-reading and ethics of the online scripts</p>
+<table>
+  <tr>
+    <td>
+      <div class="ethics_translation">
+        <header class="name">Lisa Taylor</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Translation and Ethics Manager</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> lisa.taylor@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 577471</p>
+      </div>
+    </td>
+    <td>
+      <div class="ethics_translation">
+        <header class="name">Gill McAllister</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">**ROLE**</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> gill.mcallister@adelphi.group.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01383 825098</p>
+      </div>
+    </td>
+    <td>
+      <div class="ethics_translation">
+        <header class="name">Fiona Bamforth</header>
+        {% load static %}
+        <img src="{% static 'images/avatar.png' %}" alt="Avatar" class="avatar">
+        <p class="role">Senior Data Script Operator</p>
+        <p>About Me:</p>
+        <ul>
+          <li>Fact #1</li>
+          <li>Fact #2</li>
+          <li>Fact #3</li>
+        </ul>
+        <p><i class="fa fa-fw fa-envelope"></i> fiona.bamforth@adelphigroup.com</p>
+        <p><i class="fa fa-fw fa-phone"></i> 01625 577255</p>
+      </div>
+    </td>
+  </table>
+</div>  
+<br/>
+<br/>
+
   
 {% endblock content %}
     

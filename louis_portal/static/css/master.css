@@ -14,12 +14,9 @@ body {
       left: 0;
       font-family: 'Open Sans', sans-serif;
 }
+/*
 
-#header-area {
-     background-color: #00a6cb;
-    /* background-color: #003569; */
-}
-
+*/
 #header-text {
     width: 60%;
     margin: 0 auto;
@@ -31,13 +28,6 @@ body {
     width: 50%;
     min-width: 480px;
     margin: 0 auto;
-}
-
-#header-text h1 {
-    font-size: 4em;
-    font-family: 'Bree Serif', serif;
-    color: #003569;
-    /* color: #00a6cb; */
 }
 
 #header-text h2 {
@@ -56,12 +46,12 @@ body {
 }
 
 .nav {
-    position: relative;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 12px 10px 0 rgba(80,80,80,0.5);
 }
 
 .nav-menu-group {
-	position: absolute;
-	top: -32px;
     right: 5px;
     padding: 6px;
 }
@@ -73,6 +63,20 @@ body {
     margin: 6px;
     font-family: 'Bree Serif', serif;
     font-size: 1.2em;
+}
+
+.sub-menu {
+    background-color: #ffffff;
+    display: none;
+    padding: 8px;
+}
+
+.sub-menu a {
+    color: #808080;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    display: block;
+    padding: 4px 0 4px 12px;
 }
 
 .content-area {

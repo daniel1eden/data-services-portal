@@ -25,3 +25,16 @@ def team(request):
 
 def timeline(request):
     return render(request, 'timeline_page.html')
+
+
+def hints_tips(request):
+    return render(request, 'hints_tips.html')
+
+
+def enhance_questions(request):
+    return render(request, 'enhance_questions.html')
+
+
+def question_structure(request):
+    return render(request, 'question_structure.html')
+

@@ -1,0 +1,9 @@
+#header-area, .nav-menu-group {
+    background-color: #008380;
+}
+
+#header-text h1 {
+    font-size: 4em;
+    font-family: 'Bree Serif', serif;
+    color: #ffffff;
+}
