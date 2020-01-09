@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'group_portal',
     'nathan_portal',
     'louis_portal',
-    'portal'
+    'portal',
+    'rashid_portal',
 ]
 
 MIDDLEWARE = [

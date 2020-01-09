@@ -25,6 +25,7 @@ urlpatterns = [
     path('portal/', include('portal.urls')),
     path('nathan-portal/', include('nathan_portal.urls')),
     path('louis-portal/', include('louis_portal.urls')),
+    path('rashid-portal/', include('rashid_portal.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
